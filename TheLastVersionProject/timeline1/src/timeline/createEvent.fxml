@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timeline.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="945.0" style="-fx-background-color: #A9A9A9;" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fx:id="BG" fitHeight="600.0" fitWidth="900.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/back-ground.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="574.0" fitWidth="474.0" layoutX="212.0" layoutY="5.0" opacity="0.5" pickOnBounds="true">
+               <image>
+                  <Image url="@images/whitesqr.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="243.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Event for Timeline" wrappingWidth="413.037109375">
+               <font>
+                  <Font name="Segoe UI Light" size="32.0" />
+               </font>
+            </Text>
+            <Button fx:id="AddEventToTimeLine" layoutX="484.0" layoutY="501.0" mnemonicParsing="false" onAction="#createTimeLineEvent" opacity="0.7" prefHeight="29.0" prefWidth="164.0" style="-fx-background-color: #332145;" text="Add Event to Timeline" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="eventName" layoutX="345.0" layoutY="46.0" opacity="0.7" prefHeight="32.0" prefWidth="298.0" promptText="Name of Event" />
+            <Text fill="WHITE" layoutX="228.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="79.3525390625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="231.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Range" wrappingWidth="79.3525390625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="247.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="86.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="descCreateEvent" layoutX="350.0" layoutY="208.0" opacity="0.7" prefHeight="169.0" prefWidth="298.0" promptText="A timeline about..." wrapText="true" />
+            <Button layoutX="827.0" layoutY="14.0" mnemonicParsing="false" onAction="#GoToAdminMain" opacity="0.7" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #332145;" text="Home" textFill="WHITE" />
+            <Button id="Date" fx:id="Date" layoutX="348.0" layoutY="95.0" mnemonicParsing="false" onAction="#ShowDate" opacity="0.7" prefHeight="29.0" prefWidth="59.0" style="-fx-background-color: #332145;" text="Date" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button id="Abstract" fx:id="Abstract" layoutX="433.0" layoutY="95.0" mnemonicParsing="false" onAction="#ShowAbstract" opacity="0.7" prefHeight="29.0" prefWidth="86.0" style="-fx-background-color: #332145;" text="Abstract" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <DatePicker fx:id="startDateCreate" disable="true" editable="false" layoutX="394.0" layoutY="143.0" opacity="0.0" prefHeight="25.0" prefWidth="108.0" />
+            <DatePicker fx:id="endDateCreate" disable="true" editable="false" layoutX="395.0" layoutY="172.0" opacity="0.0" prefHeight="25.0" prefWidth="108.0" />
+            <Text fx:id="startTxt" fill="WHITE" layoutX="351.0" layoutY="161.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start" wrappingWidth="54.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="endTxt" fill="WHITE" layoutX="351.0" layoutY="192.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End" wrappingWidth="39.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="startWordCreate" disable="true" layoutX="392.0" layoutY="141.0" opacity="0.0" prefHeight="26.0" prefWidth="207.0" promptText="Bginning of the universe" />
+            <TextField fx:id="endWordCreate" disable="true" layoutX="392.0" layoutY="172.0" opacity="0.0" prefHeight="26.0" prefWidth="207.0" promptText="End of human race" />
+            <Text fx:id="msg" layoutX="355.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="207.0" />
+            <Button fx:id="finish" disable="true" layoutX="248.0" layoutY="501.0" mnemonicParsing="false" onAction="#GoToAdminMain" opacity="0.4" prefHeight="29.0" prefWidth="164.0" style="-fx-background-color: #332145;" text="Finish" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="289.0" layoutY="436.0" mnemonicParsing="false" onAction="#selectImage" opacity="0.7" prefHeight="26.0" prefWidth="108.0" style="-fx-background-color: #332145;" text="Browse" textFill="WHITE" />
+            <TextField fx:id="path" layoutX="402.0" layoutY="433.0" opacity="0.7" prefHeight="32.0" prefWidth="243.0" promptText="Path..." />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

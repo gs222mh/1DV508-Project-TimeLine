@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timeline.Controller">
+   <children>
+      <ImageView fx:id="BG" fitHeight="450.0" fitWidth="674.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/back-ground.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="524.0" layoutY="14.0" mnemonicParsing="false" onAction="#GoToHome" opacity="0.7" prefHeight="27.0" prefWidth="67.0" style="-fx-background-color: #332145;" text="Log out" textFill="WHITE" />
+      <Button layoutX="601.0" layoutY="14.0" mnemonicParsing="false" onAction="#EditPage" opacity="0.7" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #332145;" text="Back" textFill="WHITE" />
+      <ListView fx:id="EventList" layoutX="231.0" layoutY="38.0" opacity="0.7" prefHeight="333.0" prefWidth="214.0" />
+      <Label fx:id="totalEvents" layoutX="291.0" layoutY="15.0" prefHeight="26.0" prefWidth="95.0" text="EVENTS" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Text fx:id="msg" layoutX="252.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="171.0" />
+      <Button layoutX="364.0" layoutY="382.0" mnemonicParsing="false" onAction="#EditEvent" opacity="0.7" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #332145;" text="Edit" textFill="WHITE" />
+      <Button layoutX="252.0" layoutY="382.0" mnemonicParsing="false" onAction="#deleteEvent" opacity="0.7" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #332145;" text="Delete" textFill="WHITE" />
+
+
+   </children>
+</AnchorPane>
